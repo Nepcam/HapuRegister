@@ -30,16 +30,17 @@
         {
             this.labelName = new System.Windows.Forms.Label();
             this.labelFormTitle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelParents = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxParents = new System.Windows.Forms.TextBox();
+            this.textBoxGParents = new System.Windows.Forms.TextBox();
             this.labelGrandparents = new System.Windows.Forms.Label();
             this.labelMarae = new System.Windows.Forms.Label();
             this.labelVerifiedPerson = new System.Windows.Forms.Label();
             this.checkedListBoxMarae = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.checkedListBoxVerified = new System.Windows.Forms.CheckedListBox();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.groupBoxRegistered = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // labelName
@@ -62,13 +63,13 @@
             this.labelFormTitle.TabIndex = 1;
             this.labelFormTitle.Text = "Hapu Register";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(139, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 26);
-            this.textBox1.TabIndex = 2;
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.Location = new System.Drawing.Point(139, 88);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(183, 26);
+            this.textBoxName.TabIndex = 2;
             // 
             // labelParents
             // 
@@ -80,21 +81,21 @@
             this.labelParents.TabIndex = 3;
             this.labelParents.Text = "Matua:";
             // 
-            // textBox2
+            // textBoxParents
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(139, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 26);
-            this.textBox2.TabIndex = 4;
+            this.textBoxParents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParents.Location = new System.Drawing.Point(139, 126);
+            this.textBoxParents.Name = "textBoxParents";
+            this.textBoxParents.Size = new System.Drawing.Size(183, 26);
+            this.textBoxParents.TabIndex = 4;
             // 
-            // textBox3
+            // textBoxGParents
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(496, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 26);
-            this.textBox3.TabIndex = 5;
+            this.textBoxGParents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGParents.Location = new System.Drawing.Point(496, 88);
+            this.textBoxGParents.Name = "textBoxGParents";
+            this.textBoxGParents.Size = new System.Drawing.Size(183, 26);
+            this.textBoxGParents.TabIndex = 5;
             // 
             // labelGrandparents
             // 
@@ -139,45 +140,56 @@
             this.checkedListBoxMarae.Size = new System.Drawing.Size(120, 94);
             this.checkedListBoxMarae.TabIndex = 11;
             // 
-            // checkedListBox1
+            // checkedListBoxVerified
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checkedListBoxVerified.FormattingEnabled = true;
+            this.checkedListBoxVerified.Items.AddRange(new object[] {
             "Koro Bucky",
             "Uncle Pip",
             "Aunty Hine",
             "Wakatea"});
-            this.checkedListBox1.Location = new System.Drawing.Point(139, 172);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox1.TabIndex = 12;
+            this.checkedListBoxVerified.Location = new System.Drawing.Point(139, 172);
+            this.checkedListBoxVerified.Name = "checkedListBoxVerified";
+            this.checkedListBoxVerified.Size = new System.Drawing.Size(120, 94);
+            this.checkedListBoxVerified.TabIndex = 12;
             // 
-            // button1
+            // buttonSubmit
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(16, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(636, 46);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "SUBMIT";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.Location = new System.Drawing.Point(16, 302);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(636, 46);
+            this.buttonSubmit.TabIndex = 13;
+            this.buttonSubmit.Text = "SUBMIT";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
+            // 
+            // groupBoxRegistered
+            // 
+            this.groupBoxRegistered.Location = new System.Drawing.Point(16, 386);
+            this.groupBoxRegistered.Name = "groupBoxRegistered";
+            this.groupBoxRegistered.Size = new System.Drawing.Size(663, 245);
+            this.groupBoxRegistered.TabIndex = 14;
+            this.groupBoxRegistered.TabStop = false;
+            this.groupBoxRegistered.Text = "groupBox1";
             // 
             // FormHapuRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
-            this.ClientSize = new System.Drawing.Size(700, 377);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkedListBox1);
+            this.ClientSize = new System.Drawing.Size(700, 647);
+            this.Controls.Add(this.groupBoxRegistered);
+            this.Controls.Add(this.buttonSubmit);
+            this.Controls.Add(this.checkedListBoxVerified);
             this.Controls.Add(this.checkedListBoxMarae);
             this.Controls.Add(this.labelVerifiedPerson);
             this.Controls.Add(this.labelMarae);
             this.Controls.Add(this.labelGrandparents);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxGParents);
+            this.Controls.Add(this.textBoxParents);
             this.Controls.Add(this.labelParents);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelFormTitle);
             this.Controls.Add(this.labelName);
             this.Name = "FormHapuRegister";
@@ -191,16 +203,17 @@
 
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelFormTitle;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelParents;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxParents;
+        private System.Windows.Forms.TextBox textBoxGParents;
         private System.Windows.Forms.Label labelGrandparents;
         private System.Windows.Forms.Label labelMarae;
         private System.Windows.Forms.Label labelVerifiedPerson;
         private System.Windows.Forms.CheckedListBox checkedListBoxMarae;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox checkedListBoxVerified;
+        private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.GroupBox groupBoxRegistered;
     }
 }
 

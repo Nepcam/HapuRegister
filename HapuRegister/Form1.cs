@@ -12,6 +12,22 @@ namespace HapuRegister
 {
     public partial class FormHapuRegister : Form
     {
-      
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //GET Name
+                //GET Parents
+                //GET Grandparents
+                //GET Marae
+                //GET Verified
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+
+
+        }
     }
 }
